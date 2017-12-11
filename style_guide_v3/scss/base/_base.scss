@@ -2,3 +2,17 @@
 the universal selector (*)
 ul elements
 p elements*/
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+
+}
