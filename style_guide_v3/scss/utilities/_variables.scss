@@ -1,3 +1,45 @@
 /*Use this partial to create variables for your repeated values.
 At minimum, create variables for fonts, breakpoints, and colors.
 Import this partial into your utilities/index.scss file*/
+
+// Colors
+
+$viking: #5fe0c1; //used for nav, header text, accents
+$malibu: #59ddfa; //used for login btn, default
+$emerald: #67cb85; //success btn
+$sunglo: #e2767c; //error
+$bittersweet: #fb785b; //warning
+$purple-mntn-majesty: #927dbf; //info button
+
+$color-primary: $viking;
+$color-secondary: $malibu;
+
+/*
+Notesgrid__col--12: #84e7d1//viking lightness +8%
+rgb(132, 231, 209)
+hsl(167, 67%, 71%)
+
+#5fe0c1//viking values
+rgb(95, 224, 193)
+hsl(166, 68%, 63%)
+
+grid__col--6: #45abc8//darkened version of default/$malibu
+rgb(69, 171, 200)
+hsl(193, 54%, 53%)
+
+grid__col--4: #82e6fb//variation of malibu
+rgb(130, 230, 251)
+hsl(190, 94%, 75%)
+
+grid__col--3: #ddb3ec//variation of $prpl-mntn-maj/info
+rgb(221, 179, 236)
+hsl(284, 60%, 81%)
+
+grid__col--5: #8bd8a2//variation of $emerald/success
+rgb(139, 216, 162)
+hsl(138, 50%, 70%)
+
+grid__col--7://variation of error/$sunglo
+
+grid__col--8://variation of warning/$bittersweet
+*/
