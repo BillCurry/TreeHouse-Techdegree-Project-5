@@ -5,6 +5,7 @@ p elements*/
 
 * {
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 ul {
@@ -13,6 +14,10 @@ ul {
   margin: 0;
 }
 
-p {
 
+p {
+    margin: 0 0 em(30px, 18px);
+    font-weight: $font-weight--light;
+    font-size: em(18px);
+    line-height: (27px/18px);
 }

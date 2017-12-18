@@ -1,6 +1,28 @@
-List of classes used:
+// List of classes used:
 
-Image:
-    .img--logo
-    .img--frame
-    .img--avatar
+// Image:
+//     .img--logo
+//     .img--frame
+//     .img--avatar
+
+// Logo--probably not needed
+
+// .site-logo {
+//     @include img-replace("logo.svg", 115px, 45px, inline-block);
+// }
+
+.img {
+  @include m(logo) {
+    @extend .centered;
+    border: 1px solid palette(grey, x-light);
+    padding: em(12px);
+  }
+  @include m(avatar) {
+    display: block;
+    border-radius: $br--round;
+    margin-top: em(24px);
+  }
+  @include m(hero) {
+    margin-bottom: em(42px);
+  }
+}

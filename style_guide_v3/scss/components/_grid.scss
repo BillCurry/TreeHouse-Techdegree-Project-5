@@ -1,18 +1,92 @@
-List of classes used
+// List of classes used
 
-    Grid:
-    .container
-    .grid__row
-    .grid__col--2
-    .grid__col--3
-    .grid__col--4
-    .grid__col--5
-    .grid__col--6
-    .grid__col--7
-    .grid__col--8
-    .grid__col--9
-    .grid__col--10
-    .grid__col--11
-    .grid__col--12
-    .centered
-    .theme__colors
+//     Grid:
+//     .container
+//     .grid__row
+//     .grid__col--2
+//     .grid__col--3
+//     .grid__col--4
+//     .grid__col--5
+//     .grid__col--6
+//     .grid__col--7
+//     .grid__col--8
+//     .grid__col--9
+//     .grid__col--10
+//     .grid__col--11
+//     .grid__col--12
+//     .centered
+//     .theme__colors
+
+.container {
+  @extend .centered;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: $font-family--primary;
+  }
+
+  // .grid__row {
+  //   @extend .centered;
+  // }
+
+  // .grid__col--3 {
+  //   @extend .centered
+  // }
+
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  // Make nested grid 100%
+  // [class*="grid__col--"] > & {
+  //   width: 100;
+  // }
+
+  // //Set a max-width grid container
+  // @media (min-width: 1100px) {
+  //   max-width: $g-cont-max-w;
+  // }
+
+
+// .grid__row {
+//   @extend %centered;
+// }
+
+// // Calculate grid columns
+
+// @media (min-width: 769px) {
+//   @for $i from 1 through $g-col-count {
+//     $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+//     $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+//     // Generate column modifier classes
+//     .grid__col--#{$i} {
+//       width: percentage($target / $context);
+//     }
+//   }
+// }
+
+// // Column styles
+
+[class^="grid__col--"] {
+//
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+  }
+
+
+
+//   @media (min-width: 769px) {
+//     @include doubly(percentage($g-gutter-width / $context));
+//     float: left;
+//     min-height: 1px;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     &:last-of-type {
+//       float: right;
+//     }
+//   }
+// }
