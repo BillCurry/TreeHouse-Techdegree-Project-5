@@ -39,9 +39,9 @@
 // Headlines
 
 %hdln-prim {
-  color: palette(grey, x-dark);
+  color: $emerald;
   font-weight: $font-weight--light;
-  font-size: em(42px);
+  font-size: em(100px);
   line-height: (46px/42px);
   margin-top: 0;
   font-family: $font-family--primary;

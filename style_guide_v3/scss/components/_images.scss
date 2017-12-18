@@ -13,8 +13,7 @@
 
 .img {
   @include m(logo) {
-    margin: auto;
-    border: 1px solid palette(grey, x-light);
+    text-align: center;
     padding: em(40px);
   }
   @include m(avatar) {
