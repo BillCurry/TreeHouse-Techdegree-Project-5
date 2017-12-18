@@ -63,13 +63,13 @@ $ui-colors: (
 );
 
 $col-colors: (
-    12 : lighten($emerald, 8%),
-    6  : darken($malibu, 15%),
-    4  : lighten($malibu, 10%),
-    3  : lighten($purple-mntn-majesty, 15%),
-    5  : lighten($emerald, 10%),
-    7  : lighten ($sunglo, 10%),
-    8  : lighten($bittersweet, 10%)
+    '12' : lighten($emerald, 8%),
+    '6'  : darken($malibu, 15%),
+    '4'  : lighten($malibu, 10%),
+    '3'  : lighten($purple-mntn-majesty, 15%),
+    '5'  : lighten($emerald, 10%),
+    '7'  : lighten ($sunglo, 10%),
+    '8'  : lighten($bittersweet, 10%)
 );
 
 // Text

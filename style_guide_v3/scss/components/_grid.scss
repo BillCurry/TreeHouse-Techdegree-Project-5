@@ -41,11 +41,13 @@
 }
 
 
-
-  // Make nested grid 100%
-  // [class*="grid__col--"] > & {
-  //   width: 100;
-  // }
+//Make nested grid 100%
+  [class*="grid__col--"] {
+    width: 100;
+      &.theme__colors {
+        @include bg-colors($col-colors);
+  }
+}
 
   // //Set a max-width grid container
   // @media (min-width: 1100px) {
