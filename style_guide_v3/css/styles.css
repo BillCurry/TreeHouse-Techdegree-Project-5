@@ -1,6 +1,6 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 .nav__item, .nav__item--current {
-  display: inline-block;
+  display: block;
   margin: 0 0.75em; }
 
 .nav__item a, .nav__item--current a {
@@ -12,7 +12,9 @@
 
 .nav__item a:hover, .nav__item--current a {
   color: palette(black);
-  border-color: #5fe0c1; }
+  border-color: #5fe0c1;
+  background-color: #67cb85;
+  border-radius: 5%; }
 
 .headline-primary, .headline-primary--grouped {
   color: #67cb85;
@@ -28,6 +30,21 @@
   font-weight: 100;
   font-size: 1.5em;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius: 0.4em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  font-weight: 400;
+  transition: opacity 0.3s;
+  display: block; }
+  .btn:hover {
+    opacity: .75; }
+  .btn:active {
+    opacity: initial; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -425,8 +442,7 @@ the universal selector (*)
 ul elements
 p elements*/
 * {
-  box-sizing: border-box;
-  border: 1px solid red; }
+  box-sizing: border-box; }
 
 ul, li {
   list-style-type: none;

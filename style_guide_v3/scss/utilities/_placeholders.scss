@@ -21,7 +21,7 @@
 // // Nav Items
 
 %nav-item-disp {
-  display: inline-block;
+  display: block;
   margin: 0 em(12px);
 }
 %nav-item-link {
@@ -34,6 +34,8 @@
 %nav-item-on {
   color: palette(black);
   border-color: $color-primary;
+  background-color: $emerald;
+  border-radius: 5%;
 }
 
 // Headlines
