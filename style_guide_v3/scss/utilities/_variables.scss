@@ -22,12 +22,7 @@ $white    : #fff;
 $black    : #0b0b0b;
 $grey     : #797e83;
 
-//$fountain-blue  : #52bab3;
-//$emerald        : #5ece7f;
-//$sunglo         : #e67478;
-$coral          : #ff784f;
-$purple-majesty : #9279c3;
-$scooter        : #39add1;
+
 $viking: #5fe0c1; //used for nav, header text, accents
 $malibu: #59ddfa; //used for login btn, default
 $emerald: #67cb85; //success btn
@@ -35,8 +30,18 @@ $sunglo: #e2767c; //error
 $bittersweet: #fb785b; //warning
 $purple-mntn-majesty: #927dbf; //info button
 
+$coral          : #ff784f;
+$purple-majesty : #9279c3;
+$scooter        : #39add1;
+
+
+
 $color-primary: $viking;
 $color-secondary: $malibu;
+
+//$fountain-blue  : #52bab3;
+//$emerald        : #5ece7f;
+//$sunglo         : #e67478;
 
 // Color Usage
 
@@ -45,23 +50,7 @@ $color-secondary : $malibu;
 $color-accent    : $emerald;
 $color-shadow    : rgba($black, .2);
 
-// Color Palette Modifiers
 
-$color-palettes: (
-    grey: (
-        xx-light : lighten($grey, 43%),
-        x-light  : lighten($grey, 35%),
-      light    : lighten($grey, 12%),
-      base     : $grey,
-        dark     : darken($grey, 8%),
-        x-dark   : darken($grey, 16%)
-    ),
-    black: (
-        light    : lighten($black, 10%),
-        base     : $black,
-        dark     : darken($black, 10%)
-    )
-);
 
 // UI Colors
 
@@ -71,6 +60,16 @@ $ui-colors: (
     error   : $sunglo,
     warning : $bittersweet,
     info    : $purple-mntn-majesty
+);
+
+$col-colors: (
+    12 : lighten($emerald, 8%),
+    6  : darken($malibu, 15%),
+    4  : lighten($malibu, 10%),
+    3  : lighten($purple-mntn-majesty, 15%),
+    5  : lighten($emerald, 10%),
+    7  : lighten ($sunglo, 10%),
+    8  : lighten($bittersweet, 10%)
 );
 
 // Text
@@ -136,3 +135,20 @@ $g-col-count    : 12;
 // */
 
 
+// Color Palette Modifiers
+
+// $color-palettes: (
+//     grey: (
+//         xx-light : lighten($grey, 43%),
+//         x-light  : lighten($grey, 35%),
+//       light    : lighten($grey, 12%),
+//       base     : $grey,
+//         dark     : darken($grey, 8%),
+//         x-dark   : darken($grey, 16%)
+//     ),
+//     black: (
+//         light    : lighten($black, 10%),
+//         base     : $black,
+//         dark     : darken($black, 10%)
+//     )
+// );

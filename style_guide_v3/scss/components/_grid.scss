@@ -27,9 +27,9 @@
   font-family: $font-family--primary;
   }
 
-  // .grid__row {
-  //   @extend .centered;
-  // }
+  .grid__row {
+    @extend .centered;
+  }
 
   // .grid__col--3 {
   //   @extend .centered
@@ -39,6 +39,14 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+ // add bkgrnd colors to columns in grid system
+  [class^="grid__col--12"] {
+    @include bg-colors($col-colors);
+    width: 100%;
+  }
+
 
   // Make nested grid 100%
   // [class*="grid__col--"] > & {
@@ -71,11 +79,11 @@
 
 // // Column styles
 
-[class^="grid__col--"] {
-//
-    margin-top: em(12px);
-    margin-bottom: em(12px);
-  }
+// [class^="grid__col--"] {
+// //
+//     margin-top: em(12px);
+//     margin-bottom: em(12px);
+//   }
 
 
 
