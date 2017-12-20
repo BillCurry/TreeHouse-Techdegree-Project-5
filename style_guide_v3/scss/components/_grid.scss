@@ -30,6 +30,10 @@
     margin-bottom: em(12px);
     display: flex;
     justify-content: center;
+   // flex-direction: column;
+  }
+
+  .grid__col--9 {
     flex-direction: column;
   }
 
