@@ -21,7 +21,8 @@
 // // Nav Items
 
 %nav-item-disp {
-//  display: block;
+  display: block;
+  // width: 100%;
   margin: em(12px);
   @extend %center-align;
 
@@ -38,7 +39,6 @@
 
 %nav-item-on {
   color: $white;
- // border-color: $color-primary;
   background-color: $viking;
   border-radius: 5%;
 

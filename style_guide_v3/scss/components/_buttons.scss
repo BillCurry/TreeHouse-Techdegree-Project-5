@@ -8,18 +8,27 @@
 //     .btn--info
 //     .theme__colors
 
-// .btn--default {
-//     @extend %btn;
-// }
-
-
-
-
 
 .btn {
-    @extend %btn;
     @include bg-colors($ui-colors);
 }
+
+.btn--default,
+.btn--error,
+.btn--success,
+.btn--warning,
+.btn--info {
+  padding: 15px 30px;
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  display: block;
+}
+
 
 
 
