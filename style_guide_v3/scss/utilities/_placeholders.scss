@@ -21,31 +21,39 @@
 // // Nav Items
 
 %nav-item-disp {
-  display: block;
-  margin: 0 em(12px);
+//  display: block;
+  margin: em(12px);
+  @extend %center-align;
+
 }
 %nav-item-link {
+  color: $grey;
   font-size: em(18px);
   font-weight: $font-weight--light;
   display: block;
   padding: em(8px, 18px);
   border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
+
 %nav-item-on {
-  color: palette(black);
-  border-color: $color-primary;
-  background-color: $emerald;
+  color: $white;
+ // border-color: $color-primary;
+  background-color: $viking;
   border-radius: 5%;
+
 }
 
 // Headlines
 
 %hdln-prim {
-  color: $emerald;
-  font-weight: $font-weight--light;
-  font-size: em(100px);
-  line-height: (46px/42px);
+  color: $color-primary;
+  font-weight: $font-weight--bold;
+  font-size: em(32px);
+  line-height: 1.3em;
   margin-top: 0;
+  margin-left: 20px;
+  padding-right: 2em;
   font-family: $font-family--primary;
 }
 
@@ -53,13 +61,14 @@
   color: palette(grey, light);
   letter-spacing: $letter-space;
   font-weight: $font-weight--thin;
-  font-size: em(24px);
-  font-family: $font-family--secondary;
+  font-size: em(18px);
+//  font-family: $font-family--secondary;
 }
 
 // Buttons
 
 %btn {
+ // width: 40px;
   padding: 15px 30px;
   border: 0;
   border-radius : $br--default;
@@ -77,12 +86,7 @@
   }
 }
 
-// // Icons
 
-// %icn--ui {
-//     line-height: 0;
-//     cursor: pointer;
-// }
 
 
 // ==========================================================================

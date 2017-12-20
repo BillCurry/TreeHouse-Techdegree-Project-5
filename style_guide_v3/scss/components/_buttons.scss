@@ -8,11 +8,20 @@
 //     .btn--info
 //     .theme__colors
 
+// .btn--default {
+//     @extend %btn;
+// }
+
+
+
+
 
 .btn {
-    @extend %btn;
     @include bg-colors($ui-colors);
 }
+
+
+
 
 // [class^="btn--"] {
 //   @extend %center-align;

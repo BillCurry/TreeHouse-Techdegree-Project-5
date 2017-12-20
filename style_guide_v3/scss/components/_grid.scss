@@ -20,24 +20,26 @@
 .container {
   @extend .centered;
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
   font-family: $font-family--primary;
   }
 
-  .grid__col {
-    @include bg-colors($col-colors);
-  }
-
-  .grid__row {
+  [class^="grid__col--"] {
     @extend .centered;
+    width: 100%;
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  // .grid__col--3 {
-  //   @extend .centered
-  // }
+ //this targets elements in the grid system that share the theme color class and grid__col class and provides a background color from my source map ($col-colors) in my variables partial
+.theme__colors.grid {
+    &__col {
+      width: 100%;
+      @include bg-colors($col-colors);
+    }
+    }
 
   .centered {
     margin-left: auto;
@@ -59,10 +61,6 @@
   // }
 
 
-// .grid__row {
-//   @extend %centered;
-// }
-
 // // Calculate grid columns
 
 // @media (min-width: 769px) {
@@ -79,11 +77,7 @@
 
 // // Column styles
 
-// [class^="grid__col--"] {
-// //
-//     margin-top: em(12px);
-//     margin-bottom: em(12px);
-//   }
+
 
 
 

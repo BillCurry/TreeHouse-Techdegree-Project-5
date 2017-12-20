@@ -11,6 +11,10 @@
 .nav {
   margin-top: em(20px);
   margin-bottom: em(30px);
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+//  align-items: center;
 
   @include e(item) {
     @extend %nav-item-disp;

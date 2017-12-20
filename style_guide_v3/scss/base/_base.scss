@@ -5,13 +5,14 @@ p elements*/
 
 * {
   box-sizing: border-box;
-//  border: 1px solid red;
+  //border: 1px solid red;
 }
 
-ul, li {
+ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  width: 100%
 }
 
 
@@ -20,4 +21,10 @@ p {
     font-weight: $font-weight--light;
     font-size: em(18px);
     line-height: (27px/18px);
+    & a {
+        text-decoration: none;
+        color: $malibu;
+        font-weight: $font-weight--bold;
+    }
+
 }

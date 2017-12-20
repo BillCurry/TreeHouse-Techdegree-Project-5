@@ -1,50 +1,39 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 .nav__item, .nav__item--current {
-  display: block;
-  margin: 0 0.75em; }
+  margin: 0.75em; }
 
 .nav__item a, .nav__item--current a {
+  color: #797e83;
   font-size: 1.125em;
   font-weight: 300;
   display: block;
   padding: 0.4444444444em;
-  border-bottom: 1px solid transparent; }
+  border-bottom: 1px solid transparent;
+  text-decoration: none; }
 
 .nav__item a:hover, .nav__item--current a {
-  color: palette(black);
-  border-color: #5fe0c1;
-  background-color: #67cb85;
+  color: #fff;
+  background-color: #5fe0c1;
   border-radius: 5%; }
 
-.headline-primary, .headline-primary--grouped {
-  color: #67cb85;
-  font-weight: 300;
-  font-size: 6.25em;
-  line-height: 1.0952380952;
+.headline--primary {
+  color: #5fe0c1;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 1.3em;
   margin-top: 0;
+  margin-left: 20px;
+  padding-right: 2em;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.headline-secondary, .headline-secondary--grouped {
+.headline--secondary {
   color: palette(grey, light);
   letter-spacing: 1px;
   font-weight: 100;
-  font-size: 1.5em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-size: 1.125em; }
 
-.btn {
-  padding: 15px 30px;
-  border: 0;
-  border-radius: 0.4em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.875em;
-  font-weight: 400;
-  transition: opacity 0.3s;
-  display: block; }
-  .btn:hover {
-    opacity: .75; }
-  .btn:active {
-    opacity: initial; }
+.nav__item, .nav__item--current {
+  text-align: center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -444,36 +433,30 @@ p elements*/
 * {
   box-sizing: border-box; }
 
-ul, li {
+ul {
   list-style-type: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
 
 p {
   margin: 0 0 1.6666666667em;
   font-weight: 300;
   font-size: 1.125em;
   line-height: 1.5; }
+  p a {
+    text-decoration: none;
+    color: #59ddfa;
+    font-weight: 700; }
 
 .img--logo {
-  text-align: center;
-  padding: 2.5em; }
+  padding: 2.5em;
+  align-items: center; }
 .img--avatar {
-  display: block;
   border-radius: 50%;
   margin-top: 1.5em; }
 .img--hero {
   margin-bottom: 2.625em; }
-
-.headline-primary {
-  margin-bottom: 1.6666666667em; }
-  .headline-primary--grouped {
-    margin-bottom: 0; }
-.headline-secondary {
-  margin-bottom: 0.9166666667em; }
-  .headline-secondary--grouped {
-    margin-top: 0.4166666667em;
-    margin-bottom: 2.25em; }
 
 .btn--default {
   background-color: #5fe0c1; }
@@ -488,34 +471,43 @@ p {
 
 .nav {
   margin-top: 1.25em;
-  margin-bottom: 1.875em; }
+  margin-bottom: 1.875em;
+  justify-content: center;
+  flex-direction: column;
+  display: flex; }
   .nav__item a {
     color: palette(grey); }
 
 .container {
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-.grid__col--12 {
-  background-color: #85d59d; }
-.grid__col--6 {
-  background-color: #0fcef8; }
-.grid__col--4 {
-  background-color: #8be7fb; }
-.grid__col--3 {
-  background-color: #bdb0d8; }
-.grid__col--5 {
-  background-color: #8dd8a4; }
-.grid__col--7 {
-  background-color: #eba0a4; }
-.grid__col--8 {
-  background-color: #fca18d; }
+[class^="grid__col--"] {
+  width: 100%;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
 
-.centered, .container, .grid__row {
+.theme__colors.grid__col {
+  width: 100%; }
+  .theme__colors.grid__col--12 {
+    background-color: #85d59d; }
+  .theme__colors.grid__col--6 {
+    background-color: #0fcef8; }
+  .theme__colors.grid__col--4 {
+    background-color: #8be7fb; }
+  .theme__colors.grid__col--3 {
+    background-color: #bdb0d8; }
+  .theme__colors.grid__col--5 {
+    background-color: #8dd8a4; }
+  .theme__colors.grid__col--7 {
+    background-color: #eba0a4; }
+  .theme__colors.grid__col--8 {
+    background-color: #fca18d; }
+
+.centered, .container, [class^="grid__col--"] {
   margin-left: auto;
   margin-right: auto; }
 

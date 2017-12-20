@@ -13,11 +13,11 @@
 
 .img {
   @include m(logo) {
-    text-align: center;
     padding: em(40px);
+    align-items: center;
   }
   @include m(avatar) {
-    display: block;
+    //display: block;
     border-radius: $br--round;
     margin-top: em(24px);
   }
