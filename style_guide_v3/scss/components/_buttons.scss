@@ -13,11 +13,8 @@
     @include bg-colors($ui-colors);
 }
 
-.btn--default,
-.btn--error,
-.btn--success,
-.btn--warning,
-.btn--info {
+
+[class^="btn--"] {
   padding: 15px 30px;
   border: 0;
   border-radius : $br--default;
