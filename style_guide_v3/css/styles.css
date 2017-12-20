@@ -505,7 +505,8 @@ p {
   margin-bottom: 0.75em;
   display: flex;
   justify-content: center;
-  flex-direction: column; }
+  flex-direction: column;
+  border-radius: 0.4em; }
 
 .theme__colors.grid__col {
   width: 100%; }
