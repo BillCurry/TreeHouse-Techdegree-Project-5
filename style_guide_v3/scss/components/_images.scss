@@ -12,6 +12,7 @@
 // }
 
 .img {
+  width: auto;
   @include m(logo) {
     padding: em(40px);
     align-items: center;

@@ -34,9 +34,12 @@
     border-radius: $br--default;
   }
 
-  // .grid__col--9 {
-  //   flex-direction: column;
-  // }
+.grid__col--3 {
+  & a {
+        @extend %center-align;
+  }
+}
+
 
  //this targets elements in the grid system that share the theme color class and grid__col class and provides a background color from my source map ($col-colors) in my variables partial
 .theme__colors.grid {

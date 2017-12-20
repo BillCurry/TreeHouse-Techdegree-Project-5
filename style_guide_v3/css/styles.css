@@ -10,7 +10,8 @@
   display: block;
   padding: 0.4444444444em;
   border-bottom: 1px solid transparent;
-  text-decoration: none; }
+  text-decoration: none;
+  width: 100%; }
 
 .nav__item a:hover, .nav__item--current a {
   color: #fff;
@@ -33,7 +34,7 @@
   font-weight: 100;
   font-size: 1.125em; }
 
-.nav__item, .nav__item--current {
+.nav__item, .nav__item--current, .grid__col--3 a {
   text-align: center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -450,14 +451,16 @@ p {
     color: #59ddfa;
     font-weight: 700; }
 
-.img--logo {
-  padding: 2.5em;
-  align-items: center; }
-.img--avatar {
-  border-radius: 50%;
-  margin-top: 1.5em; }
-.img--hero {
-  margin-bottom: 2.625em; }
+.img {
+  width: auto; }
+  .img--logo {
+    padding: 2.5em;
+    align-items: center; }
+  .img--avatar {
+    border-radius: 50%;
+    margin-top: 1.5em; }
+  .img--hero {
+    margin-bottom: 2.625em; }
 
 .btn--default {
   background-color: #5fe0c1; }

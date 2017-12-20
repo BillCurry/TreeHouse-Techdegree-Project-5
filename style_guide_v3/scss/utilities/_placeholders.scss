@@ -22,7 +22,6 @@
 
 %nav-item-disp {
   display: block;
-  // width: 100%;
   margin: em(12px);
   @extend %center-align;
 
@@ -35,6 +34,7 @@
   padding: em(8px, 18px);
   border-bottom: 1px solid transparent;
   text-decoration: none;
+  width: 100%;
 }
 
 %nav-item-on {
