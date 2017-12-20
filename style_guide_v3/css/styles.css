@@ -483,7 +483,8 @@ p {
   font-size: 0.875em;
   font-weight: 400;
   transition: opacity 0.3s;
-  display: block; }
+  display: block;
+  margin: 5px; }
 
 .nav {
   margin-top: 1.25em;
@@ -503,7 +504,8 @@ p {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column; }
 
 .theme__colors.grid__col {
   width: 100%; }
