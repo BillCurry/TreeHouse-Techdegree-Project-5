@@ -15,6 +15,8 @@
 
 
 [class^="btn--"] {
+  @extend %full-width;
+  @extend %block-element;
   padding: 15px 30px;
   border: 0;
   border-radius : $br--default;
@@ -23,8 +25,7 @@
   font-size : em(14px);
   font-weight: $font-weight--medium;
   transition: opacity $trns-duration;
-  display: block;
-  margin: 5px;
+  margin-bottom: 25px;
 }
 
 

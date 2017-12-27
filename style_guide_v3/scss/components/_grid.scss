@@ -18,26 +18,30 @@
 //     .theme__colors
 
 .container {
-  @extend .centered;
+  @extend %center-element;
   width: 90%;
   font-family: $font-family--primary;
   }
 
-  [class^="grid__col--"] {
-    @extend .centered;
+.grid__row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+[class^="grid__col--"] {
+    @extend %center-element;
     width: 100%;
     margin-top: em(12px);
     margin-bottom: em(12px);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     border-radius: $br--default;
   }
 
-.grid__col--3 {
-  & a {
-        @extend %center-align;
-  }
+
+[class^="grid__col--"] + [class^="grid__col--"] {
+  margin-top: em(-9px);
 }
 
 
@@ -49,10 +53,7 @@
     }
     }
 
-  .centered {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 
 // //Make nested grid 100%

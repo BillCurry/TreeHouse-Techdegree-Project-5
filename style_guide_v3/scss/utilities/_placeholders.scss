@@ -4,15 +4,6 @@
 // Headlines
 // Nav items*/
 
-// // %panel-default {
-// //   padding-top: em(30px);
-// //   padding-bottom: em(20px);
-// // }
-
-// // %panel-padding {
-// //   padding-top: em(80px);
-// //   padding-bottom: em(34px);
-// // }
 
 // // ==========================================================================
 // // Placeholders
@@ -20,12 +11,35 @@
 
 // // Nav Items
 
+%base-img {
+  display: block;
+  @extend %center-element;
+  max-width: 100%;
+  }
+
+%block-element {
+  display: block;
+}
+
+%center-element {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%full-width {
+  width: 100%;
+}
+
+%center-text {
+    text-align: center;
+}
+
 %nav-item-disp {
   display: block;
   margin: em(12px);
-  @extend %center-align;
-
+  @extend %center-text;
 }
+
 %nav-item-link {
   color: $grey;
   font-size: em(18px);
@@ -39,7 +53,7 @@
 
 %nav-item-on {
   color: $white;
-  background-color: $viking;
+  background-color: $color-primary;
   border-radius: 5%;
 
 }
@@ -84,22 +98,5 @@
   &:active {
     opacity: initial;
   }
-}
-
-
-
-
-// ==========================================================================
-// Helpers
-// ==========================================================================
-
-// Center elements
-
-
-
-// Center alignment
-
-%center-align {
-    text-align: center;
 }
 

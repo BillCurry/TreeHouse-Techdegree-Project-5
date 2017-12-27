@@ -1,4 +1,21 @@
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+.img--logo, .img--avatar, .img--frame {
+  display: block;
+  max-width: 100%; }
+
+[class^="btn--"] {
+  display: block; }
+
+.img--logo, .img--avatar, .img--frame, .blockquote, .container, [class^="grid__col--"] {
+  margin-left: auto;
+  margin-right: auto; }
+
+[class^="btn--"] {
+  width: 100%; }
+
+.nav__item, .nav__item--current {
+  text-align: center; }
+
 .nav__item, .nav__item--current {
   display: block;
   margin: 0.75em; }
@@ -33,9 +50,6 @@
   letter-spacing: 1px;
   font-weight: 100;
   font-size: 1.125em; }
-
-.nav__item, .nav__item--current, .grid__col--3 a {
-  text-align: center; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -428,7 +442,7 @@ template {
 [hidden] {
   display: none; }
 
-/*In your base folder, include a normalize.css file and create a base.scss file. In the base.scss file, you can only apply styles to three different elements directly:
+ /*In your base folder, include a normalize.css file and create a base.scss file. In the base.scss file, you can only apply styles to three different elements directly:
 the universal selector (*)
 ul elements
 p elements*/
@@ -451,19 +465,25 @@ p {
     color: #59ddfa;
     font-weight: 700; }
 
-.img {
-  width: auto; }
-  .img--logo {
-    padding: 2.5em;
-    align-items: center; }
-  .img--avatar {
-    border-radius: 50%;
-    margin-top: 1.5em; }
-  .img--hero {
-    margin-bottom: 2.625em; }
+.img--logo {
+  padding-top: 1em; }
+.img--frame {
+  border: 1px solid grey;
+  padding: 0.625em;
+  max-width: 95%; }
+
+.blockquote {
+  padding-left: 20px;
+  border-left: 0.75em solid #5fe0c1;
+  border-radius: 3%;
+  font-size: 1.1em;
+  font-style: italic;
+  color: grey;
+  width: 60%;
+  margin-bottom: 1.25em; }
 
 .btn--default {
-  background-color: #5fe0c1; }
+  background-color: #59ddfa; }
 .btn--success {
   background-color: #67cb85; }
 .btn--error {
@@ -482,8 +502,7 @@ p {
   font-size: 0.875em;
   font-weight: 400;
   transition: opacity 0.3s;
-  display: block;
-  margin: 5px; }
+  margin-bottom: 25px; }
 
 .nav {
   margin-top: 1.25em;
@@ -498,14 +517,20 @@ p {
   width: 90%;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.grid__row {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; }
+
 [class^="grid__col--"] {
   width: 100%;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   border-radius: 0.4em; }
+
+[class^="grid__col--"] + [class^="grid__col--"] {
+  margin-top: -0.5625em; }
 
 .theme__colors.grid__col {
   width: 100%; }
@@ -523,9 +548,5 @@ p {
     background-color: #eba0a4; }
   .theme__colors.grid__col--8 {
     background-color: #fca18d; }
-
-.centered, .container, [class^="grid__col--"] {
-  margin-left: auto;
-  margin-right: auto; }
 
 /*# sourceMappingURL=styles.css.map */

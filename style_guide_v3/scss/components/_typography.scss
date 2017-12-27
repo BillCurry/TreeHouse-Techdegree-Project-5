@@ -24,7 +24,17 @@
 }
 
 
-
+.blockquote {
+@extend %center-element;
+padding-left: 20px;
+border-left: em(12px) solid $color-primary;
+border-radius: 3%;
+font-size: 1.1em;
+font-style: italic;
+color: grey;//adjust this
+width: 60%;
+margin-bottom: em(20px);
+}
 
 
 // .headline {

@@ -11,18 +11,19 @@
 //     @include img-replace("logo.svg", 115px, 45px, inline-block);
 // }
 
+
 .img {
-  width: auto;
   @include m(logo) {
-    padding: em(40px);
-    align-items: center;
+    @extend %base-img;
+    padding-top: 1em;
   }
   @include m(avatar) {
-    //display: block;
-    border-radius: $br--round;
-    margin-top: em(24px);
+    @extend %base-img;
   }
-  @include m(hero) {
-    margin-bottom: em(42px);
+  @include m(frame) {
+    @extend %base-img;
+    border: 1px solid grey;
+    padding: em(10px);
+    max-width: 95%;
   }
 }
