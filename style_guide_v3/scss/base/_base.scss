@@ -5,7 +5,11 @@ p elements*/
 
 * {
   box-sizing: border-box;
-  //border: 1px solid red;
+  // border: 1px solid red;
+}
+
+.debug {
+  border: solid 1px red;
 }
 
 ul {
@@ -21,10 +25,4 @@ p {
     font-weight: $font-weight--light;
     font-size: em(18px);
     line-height: (27px/18px);
-    & a {
-        text-decoration: none;
-        color: $malibu;
-        font-weight: $font-weight--bold;
-    }
-
 }

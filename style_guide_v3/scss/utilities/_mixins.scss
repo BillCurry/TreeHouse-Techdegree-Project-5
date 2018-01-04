@@ -30,6 +30,20 @@
     }
 }
 
+//Flexbox Mixin
+@mixin flexy (
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null) {
+    display: $disp;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+  }
+
+
+
 // // Generating :before or :after pseudo-element shapes
 
 // @mixin p-el(

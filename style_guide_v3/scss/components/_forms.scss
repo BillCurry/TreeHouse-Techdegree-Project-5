@@ -10,28 +10,42 @@
 // // Form Elements
 // // ==========================================================================
 
-// .form {
-//     @include e(label) {
-//         @include m(hidden) {
-//             @extend .srt;
-//         }
-//         display: block;
+
+// .form__label {
+//         display:block;
 //         margin-bottom: em(10px);
 //     }
 
-//     @include e(input) {
-//         font-size : em(18px);
-//         margin-bottom: em(20px, 18px);
-//         border-bottom: 6px solid palette(grey, x-light);
-//         border-radius: $br--default;
-//         background: palette(grey, xx-light);
-//         color: palette(black, dark);
-//         font-weight: $font-weight--light;
 
-//         &:focus {
-//             border-color: $color-primary;
-//         }
-//     }
+
+.form {
+    // @extend %hdln-sec;
+    @include e(label) {
+        display: block;
+        margin-bottom: em(10px);
+        @include m(hidden) {
+            @extend .srt;
+        }
+    }
+
+    @include e(input) {
+        @extend %full-width;
+        font-size: em(14px);
+        margin-bottom: em(20px, 14px);
+        margin-top: em(20px);
+        border: 0;
+        border-bottom: 6px solid $viking;
+        color: palette(black, light);
+        font-weight: $font-weight--medium;
+        font-family: $font-family--secondary;
+        padding-left: em(15px);
+        padding-bottom: em(15px);
+
+        &:focus {
+            border-color: $color-primary;
+        }
+    }
+}
 
 //     @include e(btn) {
 //         @extend %btn;

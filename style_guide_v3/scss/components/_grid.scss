@@ -1,6 +1,4 @@
-// List of classes used
-
-//     Grid:
+//Grid:
 //     .container
 //     .grid__row
 //     .grid__col--2
@@ -19,39 +17,44 @@
 
 .container {
   @extend %center-element;
-  width: 90%;
-  font-family: $font-family--primary;
+  padding: 0 1em .5em 1em;
+  @extend %base-text;
+  max-width: $container-max-width;
   }
 
 .grid__row {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  @include flexy ($dir:column, $just:center);
+  margin-bottom: 1em;
 }
 
 
 [class^="grid__col--"] {
     @extend %center-element;
-    width: 100%;
+    @extend %block-element;
+    @extend %full-width;
     margin-top: em(12px);
     margin-bottom: em(12px);
     border-radius: $br--default;
+    padding: 15px 30px;
+    border: 0;
+    color: palette(gray);
+    font-size : em(16px);
+    font-weight: $font-weight--medium;
+    // margin-bottom: 25px;
   }
 
 
 [class^="grid__col--"] + [class^="grid__col--"] {
-  margin-top: em(-9px);
+  margin-top: em(-5px);
 }
 
 
  //this targets elements in the grid system that share the theme color class and grid__col class and provides a background color from my source map ($col-colors) in my variables partial
 .theme__colors.grid {
     &__col {
-      width: 100%;
       @include bg-colors($col-colors);
     }
-    }
+}
 
 
 

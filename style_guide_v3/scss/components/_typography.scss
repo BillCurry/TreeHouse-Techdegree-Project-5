@@ -18,7 +18,7 @@
         }
     &--secondary {
          @extend %hdln-sec;
-         //margin-bottom: em(22px, 24px);
+         margin-bottom: em(20px);
      }
 
 }
@@ -26,38 +26,17 @@
 
 .blockquote {
 @extend %center-element;
-padding-left: 20px;
-border-left: em(12px) solid $color-primary;
-border-radius: 3%;
-font-size: 1.1em;
+font-size: em(24px);
 font-style: italic;
-color: grey;//adjust this
-width: 60%;
-margin-bottom: em(20px);
+font-weight: $font-weight--light;
+color: palette(grey, dark);
+border-left: em(5px) solid $color-primary;
+border-radius: $br--default;
+width: 80%;
+margin-bottom: em(32px, 24px);
+padding-left: em(15px);
 }
 
-
-// .headline {
-
-//     &-primary {
-//         @extend %hdln-prim;
-//         margin-bottom: em(70px, 42px);
-
-//         @include m(grouped) {
-//             @extend %hdln-prim;
-//             margin-bottom: 0;
-//         }
-//     }
-
-//     &-secondary {
-//         @extend %hdln-sec;
-//         margin-bottom: em(22px, 24px);
-
-//         @include m(grouped) {
-//             @extend %hdln-sec;
-//             margin-top: em(10px, 24px);
-//             margin-bottom: em(54px, 24px);
-//         }
-//     }
-
-// }
+.link {
+ @extend %link-style;
+    }

@@ -15,17 +15,19 @@
 
 
 [class^="btn--"] {
-  @extend %full-width;
   @extend %block-element;
-  padding: 15px 30px;
+  @extend %center-element;
+  @extend %full-width;
   border: 0;
-  border-radius : $br--default;
   color: $white;
-  text-transform: uppercase;
+  border-radius : $br--default;
+
   font-size : em(14px);
   font-weight: $font-weight--medium;
-  transition: opacity $trns-duration;
+  text-transform: uppercase;
+
   margin-bottom: 25px;
+  padding: 15px 30px;
 }
 
 

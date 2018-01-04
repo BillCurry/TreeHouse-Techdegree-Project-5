@@ -22,8 +22,8 @@
   }
   @include m(frame) {
     @extend %base-img;
-    border: 1px solid grey;
+    border: 1px solid palette(gray, x-light);
     padding: em(10px);
-    max-width: 95%;
+    // max-width: 95%;
   }
 }

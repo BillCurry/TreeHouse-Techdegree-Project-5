@@ -9,52 +9,76 @@
 // // Placeholders
 // // ==========================================================================
 
-// // Nav Items
+
+%base-text {
+  font-family: $font-family--primary;
+  font-size: $base__font-size;
+  line-height: ($base__line / $base__font-size);
+  font-weight: $font-weight--light;
+  color: $gray;
+}
 
 %base-img {
   display: block;
   @extend %center-element;
   max-width: 100%;
+  margin-bottom: em(24px);
   }
+
+//Link
+%link-style {
+    text-decoration: none;
+    color: $malibu;
+    font-weight: $font-weight--bold;
+}
+
+//Display
 
 %block-element {
   display: block;
 }
+
+%inline-block-element {
+  display: inline-block;
+}
+
+//Centering & Width
 
 %center-element {
     margin-left: auto;
     margin-right: auto;
 }
 
-%full-width {
-  width: 100%;
-}
-
 %center-text {
     text-align: center;
 }
 
-%nav-item-disp {
+%full-width {
+  width: 100%;
+}
+
+
+//Nav
+%nav-item-base {//these are my base styles for <li> elements
   display: block;
   margin: em(12px);
   @extend %center-text;
 }
 
-%nav-item-link {
-  color: $grey;
+%nav-item-a {
   font-size: em(18px);
   font-weight: $font-weight--light;
   display: block;
   padding: em(8px, 18px);
   border-bottom: 1px solid transparent;
   text-decoration: none;
-  width: 100%;
+  @extend %full-width;
 }
 
-%nav-item-on {
+%nav-item-hover {
   color: $white;
   background-color: $color-primary;
-  border-radius: 5%;
+  border-radius: $br--default;
 
 }
 
@@ -64,25 +88,22 @@
   color: $color-primary;
   font-weight: $font-weight--bold;
   font-size: em(32px);
-  line-height: 1.3em;
+  line-height: 1.2em;
   margin-top: 0;
   margin-left: 20px;
   padding-right: 2em;
-  font-family: $font-family--primary;
 }
 
 %hdln-sec {
-  color: palette(grey, light);
+  color: palette(gray, light);
   letter-spacing: $letter-space;
   font-weight: $font-weight--thin;
   font-size: em(18px);
-//  font-family: $font-family--secondary;
 }
 
 // Buttons
 
 %btn {
- // width: 40px;
   padding: 15px 30px;
   border: 0;
   border-radius : $br--default;
@@ -90,7 +111,6 @@
   text-transform: uppercase;
   font-size : em(14px);
   font-weight: $font-weight--medium;
-  transition: opacity $trns-duration;
   display: block;
   &:hover {
     opacity: .75;
@@ -99,4 +119,39 @@
     opacity: initial;
   }
 }
+
+
+//Helpers
+
+%clearfix {
+  &::after {//i'm using dbl colon convention
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.srt {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+%pseudos {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+
+
+
+
+
+
 

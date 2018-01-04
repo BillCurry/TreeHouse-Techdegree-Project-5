@@ -3,152 +3,110 @@
 // ==========================================================================
 
 // Font Stacks
-
 $font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
 $font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Font Weights
-
 $font-weight--thin       : 100;
 $font-weight--light      : 300;
 $font-weight--medium     : 400;
 $font-weight--bold       : 700;
 $font-weight--ultra-bold : 900;
 
-// Descriptive Base Colors
+// Text
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
 
+// Descriptive Base Colors
 $white    : #fff;
 $black    : #0b0b0b;
-$grey     : #797e83;
+$gray     : #797e83;
+$viking   : #5fe0c1; //used for nav, header text, accents; this will be $color-prim
 
-
-$viking: #5fe0c1; //used for nav, header text, accents
+//Descriptive Button colors
 $malibu: #59ddfa; //used for login btn, default
 $emerald: #67cb85; //success btn
 $sunglo: #e2767c; //error
-$bittersweet: #fb785b; //warning
+$persimmon: #fd6c4c; //warning
 $purple-mntn-majesty: #927dbf; //info button
 
+// Button map UI Colors
+$ui-colors: (
+    default : $malibu,
+    success : $emerald,
+    error   : $sunglo,
+    warning : $persimmon,
+    info    : $purple-mntn-majesty
+);
 
+//Descriptive Grid colors
+$riptide         : #75e5cb;//  col12
+$pelorous        : #37a1c3;// col6
+$malibu          : #73e2fd;//col4
+$biloba-flower   : #d9a9eb; //col3
+$vista-blue      : #7dd496;//col5
+$sea-pink        : #e99499; //col7
+$vivid-tangerine : #fd947a; //col8
 
-// $coral          : #ff784f;
-// $purple-majesty : #9279c3;
-// $scooter        : #39add1;
+//Grid map
 
+$col-colors: (
+    '12' : $riptide,
+    '6'  : $pelorous,
+    '4'  : $malibu,
+    '3'  : $biloba-flower,
+    '5'  : $vista-blue,
+    '7'  : $sea-pink,
+    '8'  : $vivid-tangerine
+);
 
-
-
-
-//$fountain-blue  : #52bab3;
-//$emerald        : #5ece7f;
-//$sunglo         : #e67478;
 
 // Color Usage
-
 $color-primary   : $viking;
 $color-secondary : $malibu;
 $color-accent    : $emerald;
 $color-shadow    : rgba($black, .2);
 
 
-// UI Colors
-
-$ui-colors: (
-    default : $malibu,
-    success : $emerald,
-    error   : $sunglo,
-    warning : $bittersweet,
-    info    : $purple-mntn-majesty
+//Color Palette Modifiers
+$palettes: (
+    gray: (
+        xx-light : lighten($gray, 43%),
+        x-light  : lighten($gray, 35%),
+      light      : lighten($gray, 12%),
+      base       : $gray,
+        dark     : darken($gray, 8%),
+        x-dark   : darken($gray, 16%),
+    ),
+    black: (
+        light    : lighten($black, 10%),
+        base     : $black,
+        dark     : darken($black, 10%),
+        x-dark   : darken($black, 25%),
+    )
 );
 
-$col-colors: (
-    '12' : lighten($emerald, 8%),
-    '6'  : darken($malibu, 15%),
-    '4'  : lighten($malibu, 10%),
-    '3'  : lighten($purple-mntn-majesty, 15%),
-    '5'  : lighten($emerald, 10%),
-    '7'  : lighten($sunglo, 10%),
-    '8'  : lighten($bittersweet, 10%)
-);
-
-// Text
-
-$base__font-size : 16px;
-$base__line      : 24px;
-$letter-space    : 1px;
 
 // Border radius
 
 $br--default    : .4em;
 $br--round      : 50%;
 
-// Transitions
 
-$trns-duration  : .3s;
-
-// Path to Assets
-
-$path--rel      : "../img";
 
 // Grid
-
-$g-col-width    : 65px;
-$g-gutter-width : 20px;
+$g-col-width    : 50px;
+$g-gutter-width : 8px;
 $g-col-count    : 12;
+$container-max-width : 1150px;
 
 
-// $g-cont-max-w   : 1050px;// /*Use this partial to create variables for your repeated values.
-// At minimum, create variables for fonts, breakpoints, and colors.
-// Import this partial into your utilities/index.scss file*/
+//MQ map
+$breakpoints: (
+    tablet  : 768px,
+    desktop : 1200px,
+);
 
 
-
-// /*
-// Notesgrid__col--12: #84e7d1//viking lightness +8%
-// rgb(132, 231, 209)
-// hsl(167, 67%, 71%)
-
-// #5fe0c1//viking values
-// rgb(95, 224, 193)
-// hsl(166, 68%, 63%)
-
-// grid__col--6: #45abc8//darkened version of default/$malibu
-// rgb(69, 171, 200)
-// hsl(193, 54%, 53%)
-
-// grid__col--4: #82e6fb//variation of malibu
-// rgb(130, 230, 251)
-// hsl(190, 94%, 75%)
-
-// grid__col--3: #ddb3ec//variation of $prpl-mntn-maj/info
-// rgb(221, 179, 236)
-// hsl(284, 60%, 81%)
-
-// grid__col--5: #8bd8a2//variation of $emerald/success
-// rgb(139, 216, 162)
-// hsl(138, 50%, 70%)
-
-// grid__col--7://variation of error/$sunglo
-
-// grid__col--8://variation of warning/$bittersweet
-// */
-
-
-// Color Palette Modifiers
-
-// $color-palettes: (
-//     grey: (
-//         xx-light : lighten($grey, 43%),
-//         x-light  : lighten($grey, 35%),
-//       light    : lighten($grey, 12%),
-//       base     : $grey,
-//         dark     : darken($grey, 8%),
-//         x-dark   : darken($grey, 16%)
-//     ),
-//     black: (
-//         light    : lighten($black, 10%),
-//         base     : $black,
-//         dark     : darken($black, 10%)
-//     )
-// );
