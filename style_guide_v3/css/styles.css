@@ -541,36 +541,55 @@ p {
   text-transform: uppercase;
   margin-bottom: 25px;
   padding: 15px 30px; }
+  @media (min-width: 769px) {
+    [class^="btn--"] {
+      width: auto; } }
 
 .nav {
   margin-top: 1.25em;
   margin-bottom: 1.875em; }
+  @media (min-width: 769px) {
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
   .nav__item a {
     color: #797e83; }
 
 .container {
   padding: 0 1em .5em 1em;
-  max-width: 1150px; }
+  max-width: 1100px; }
 
 .grid__row {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1em; }
+  @media (min-width: 769px) {
+    .grid__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; } }
 
 [class^="grid__col--"] {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
   border-radius: 0.4em;
   padding: 15px 30px;
+  height: auto;
   border: 0;
   color: #797e83;
   font-size: 1em;
   font-weight: 400; }
+  @media (min-width: 769px) {
+    [class^="grid__col--"] {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
 
-[class^="grid__col--"] + [class^="grid__col--"] {
-  margin-top: -0.3125em; }
-
+@media (min-width: 1px) and (max-width: 768px) {
+  [class^="grid__col--"] + [class^="grid__col--"] {
+    margin-top: -0.3125em; } }
 .theme__colors.grid__col--12 {
   background-color: #75e5cb; }
 .theme__colors.grid__col--6 {
@@ -585,5 +604,42 @@ p {
   background-color: #e99499; }
 .theme__colors.grid__col--8 {
   background-color: #fd947a; }
+
+@media (min-width: 769px) {
+  .grid__col--1 {
+    width: 7.0422535211%; }
+
+  .grid__col--2 {
+    width: 15.4929577465%; }
+
+  .grid__col--3 {
+    width: 23.9436619718%; }
+
+  .grid__col--4 {
+    width: 32.3943661972%; }
+
+  .grid__col--5 {
+    width: 40.8450704225%; }
+
+  .grid__col--6 {
+    width: 49.2957746479%; }
+
+  .grid__col--7 {
+    width: 57.7464788732%; }
+
+  .grid__col--8 {
+    width: 66.1971830986%; }
+
+  .grid__col--9 {
+    width: 74.6478873239%; }
+
+  .grid__col--10 {
+    width: 83.0985915493%; }
+
+  .grid__col--11 {
+    width: 91.5492957746%; }
+
+  .grid__col--12 {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -19,12 +19,15 @@
   @extend %center-element;
   padding: 0 1em .5em 1em;
   @extend %base-text;
-  max-width: $container-max-width;
+  max-width: $g-cont-max-w;
   }
 
 .grid__row {
   @include flexy ($dir:column, $just:center);
   margin-bottom: 1em;
+  @media (min-width: 769px) {
+    @include flexy($dir:row, $just:space-between);
+  }
 }
 
 
@@ -36,16 +39,23 @@
     margin-bottom: em(12px);
     border-radius: $br--default;
     padding: 15px 30px;
+    height: auto;
     border: 0;
     color: palette(gray);
     font-size : em(16px);
     font-weight: $font-weight--medium;
     // margin-bottom: 25px;
+    @media (min-width:769px){
+      @include flexy ($dir:row, $just:space-around);
+    }
   }
 
 
-[class^="grid__col--"] + [class^="grid__col--"] {
+//this rule decreases the margin-top of grid__col siblings
+@media (min-width:1px) and (max-width:768px) {
+  [class^="grid__col--"] + [class^="grid__col--"] {
   margin-top: em(-5px);
+  }
 }
 
 
@@ -61,7 +71,7 @@
 
 // //Make nested grid 100%
 //   [class*="grid__col--"] {
-//     width: 100;
+//     width: 100%;
 //       &theme__colors {
 //         @include bg-colors($col-colors);
 //   }
@@ -74,18 +84,17 @@
 
 
 // // Calculate grid columns
+@media (min-width: 769px) {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;//gives us the total width of all columns and gutters, based on the col-count
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 
-// @media (min-width: 769px) {
-//   @for $i from 1 through $g-col-count {
-//     $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
-//     $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-
-//     // Generate column modifier classes
-//     .grid__col--#{$i} {
-//       width: percentage($target / $context);
-//     }
-//   }
-// }
+    // Generate column modifier classes
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
 
 // // Column styles
 
