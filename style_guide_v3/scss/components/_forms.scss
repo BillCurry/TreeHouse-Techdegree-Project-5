@@ -47,8 +47,8 @@
     }
 }
 
-//     @include e(btn) {
-//         @extend %btn;
-//         background: $color-primary;
-//     }
-// }
+@media (min-width:769px){
+    .form__input + .btn--default {
+        width: 100%;
+    }
+}

@@ -19,8 +19,9 @@
   @extend %center-element;
   padding: 0 1em .5em 1em;
   @extend %base-text;
+  width: 90%;
   max-width: $g-cont-max-w;
-  }
+}
 
 .grid__row {
   @include flexy ($dir:column, $just:center);
@@ -69,13 +70,7 @@
 
 
 
-// //Make nested grid 100%
-//   [class*="grid__col--"] {
-//     width: 100%;
-//       &theme__colors {
-//         @include bg-colors($col-colors);
-//   }
-// }
+
 
   // //Set a max-width grid container
   // @media (min-width: 1100px) {
@@ -113,3 +108,9 @@
 //     }
 //   }
 // }
+
+  // //Make nested div card 100%
+  // [class*="grid__col--"] > div {
+  //   width: 100%;
+  // }
+  // }
