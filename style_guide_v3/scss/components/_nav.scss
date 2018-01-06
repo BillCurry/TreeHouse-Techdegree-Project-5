@@ -5,7 +5,7 @@
 .nav {//base styles for the <ul> element
   margin-top: em(20px);
   margin-bottom: em(30px);
-  @media (min-width: 769px) {
+  @include mq(medium) {
     @include flexy ($dir:row, $just: space-between);
   }
 

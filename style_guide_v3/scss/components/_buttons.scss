@@ -28,29 +28,8 @@
 
   margin-bottom: 25px;
   padding: 15px 30px;
-  @media (min-width:769px) {
+  @include mq(medium) {
     width: auto;
   }
 }
 
-// @media (min-width:769px) {
-//   [class^="btn--"] + [class^="btn--"] {
-//   margin-top: em(-5px);
-//   }
-// }
-
-
-
-// [class^="btn--"] {
-//   @extend %center-align;
-//   @extend %btn;
-//   margin-bottom: em(20px, 14px);
-//   @media (min-width: 1px) and (max-width: 768px) {
-//     width: 100%;
-//   }
-//   @media (min-width: 769px) {
-//     width: auto;
-//     display: inline-block;
-//     @include doubly(20px);
-//   }
-// }

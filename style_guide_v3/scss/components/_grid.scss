@@ -1,19 +1,3 @@
-//Grid:
-//     .container
-//     .grid__row
-//     .grid__col--2
-//     .grid__col--3
-//     .grid__col--4
-//     .grid__col--5
-//     .grid__col--6
-//     .grid__col--7
-//     .grid__col--8
-//     .grid__col--9
-//     .grid__col--10
-//     .grid__col--11
-//     .grid__col--12
-//     .centered
-//     .theme__colors
 
 .container {
   @extend %center-element;
@@ -26,7 +10,7 @@
 .grid__row {
   @include flexy ($dir:column, $just:center);
   margin-bottom: 1em;
-  @media (min-width: 769px) {
+  @include mq(medium) {
     @include flexy($dir:row, $just:space-between);
   }
 }
@@ -46,18 +30,19 @@
     font-size : em(16px);
     font-weight: $font-weight--medium;
     // margin-bottom: 25px;
-    @media (min-width:769px){
+    @include mq(medium){
       @include flexy ($dir:row, $just:space-around);
     }
   }
 
 
-//this rule decreases the margin-top of grid__col siblings
-@media (min-width:1px) and (max-width:768px) {
+//this rule decreases the margin-top of grid__col siblings to match layout in mobile view
   [class^="grid__col--"] + [class^="grid__col--"] {
-  margin-top: em(-5px);
+  @include mq(small) {
+    margin-top: em(-5px);
   }
 }
+
 
 
  //this targets elements in the grid system that share the theme color class and grid__col class and provides a background color from my source map ($col-colors) in my variables partial
@@ -67,50 +52,21 @@
     }
 }
 
-
-
-
-
-
-  // //Set a max-width grid container
-  // @media (min-width: 1100px) {
-  //   max-width: $g-cont-max-w;
-  // }
-
-
-// // Calculate grid columns
-@media (min-width: 769px) {
-  @for $i from 1 through $g-col-count {
-    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;//gives us the total width of all columns and gutters, based on the col-count
-    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-
-    // Generate column modifier classes
-    .grid__col--#{$i} {
-      width: percentage($target / $context);
-    }
+.grid__col {
+  @include mq(medium) {
+    @include g-columns;
   }
 }
+// // // Calculate grid columns
+// @include mq(medium) {
+//   @for $i from 1 through $g-col-count {
+//     $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;//gives us the total width of all columns and gutters, based on the col-count
+//     $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
 
-// // Column styles
-
-
-
-
-
-//   @media (min-width: 769px) {
-//     @include doubly(percentage($g-gutter-width / $context));
-//     float: left;
-//     min-height: 1px;
-//     padding-left: 10px;
-//     padding-right: 10px;
-//     &:last-of-type {
-//       float: right;
+//     // Generate column modifier classes
+//     .grid__col--#{$i} {
+//       width: percentage($target / $context);
 //     }
 //   }
 // }
 
-  // //Make nested div card 100%
-  // [class*="grid__col--"] > div {
-  //   width: 100%;
-  // }
-  // }

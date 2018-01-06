@@ -595,6 +595,7 @@ p {
 @media (min-width: 1px) and (max-width: 768px) {
   [class^="grid__col--"] + [class^="grid__col--"] {
     margin-top: -0.3125em; } }
+
 .theme__colors.grid__col--12 {
   background-color: #75e5cb; }
 .theme__colors.grid__col--6 {
@@ -613,37 +614,26 @@ p {
 @media (min-width: 769px) {
   .grid__col--1 {
     width: 7.0422535211%; }
-
   .grid__col--2 {
     width: 15.4929577465%; }
-
   .grid__col--3 {
     width: 23.9436619718%; }
-
   .grid__col--4 {
     width: 32.3943661972%; }
-
   .grid__col--5 {
     width: 40.8450704225%; }
-
   .grid__col--6 {
     width: 49.2957746479%; }
-
   .grid__col--7 {
     width: 57.7464788732%; }
-
   .grid__col--8 {
     width: 66.1971830986%; }
-
   .grid__col--9 {
     width: 74.6478873239%; }
-
   .grid__col--10 {
     width: 83.0985915493%; }
-
   .grid__col--11 {
     width: 91.5492957746%; }
-
   .grid__col--12 {
     width: 100%; } }
 

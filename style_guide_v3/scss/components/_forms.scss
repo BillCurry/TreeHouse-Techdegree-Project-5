@@ -47,7 +47,7 @@
     }
 }
 
-@media (min-width:769px){
+@include mq(medium) {
     .form__input + .btn--default {
         width: 100%;
     }
