@@ -574,7 +574,8 @@ p {
     .grid__row {
       display: flex;
       flex-direction: row;
-      justify-content: space-between; } }
+      justify-content: space-between;
+      align-items: flex-start; } }
 
 [class^="grid__col--"] {
   margin-top: 0.75em;

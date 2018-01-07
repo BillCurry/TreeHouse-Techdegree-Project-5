@@ -12,6 +12,7 @@
   margin-bottom: 1em;
   @include mq(medium) {
     @include flexy($dir:row, $just:space-between);
+    align-items: flex-start;
   }
 }
 
